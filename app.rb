@@ -11,20 +11,9 @@ get("/") do
   erb(:rules)
 end
 
-get("/rock") do
+get("/:rps") do
+  @user_rps = params.fetch("rps")
   @opponent = ["rock", "paper", "scissors"]
   @opponent_sample = @opponent.sample
-  erb(:rock)
-end
-
-get("/paper") do
-  @opponent = ["rock", "paper", "scissors"]
-  @opponent_sample = @opponent.sample
-  erb(:paper)
-end
-
-get("/scissors") do
-  @opponent = ["rock", "paper", "scissors"]
-  @opponent_sample = @opponent.sample
-  erb(:scissors)
+  erb(:flexible)
 end

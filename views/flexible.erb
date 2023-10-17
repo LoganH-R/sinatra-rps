@@ -1,0 +1,18 @@
+<h2>We played <%= @user_rps %>!</h2>
+<h2>They played <%= @opponent_sample %>!</h2>
+
+<% if @user_rps == @opponent_sample %>
+  <h2>We tied!</h2>
+<% elsif @opponent_sample == "rock" && @user_rps == "paper" %>
+  <h2>We won!</h2>
+<% elsif @opponent_sample == "rock" && @user_rps == "scissors" %>
+  <h2>We lost!</h2>
+<% elsif @opponent_sample == "paper" && @user_rps == "scissors" %>
+  <h2>We won!</h2>
+<% elsif @opponent_sample == "paper" && @user_rps == "rock" %>
+  <h2>We lost!</h2>
+<% elsif @opponent_sample == "scissors" && @user_rps == "rock" %>
+  <h2>We won!</h2>
+<% elsif @opponent_sample == "scissors" && @user_rps == "paper" %>
+  <h2>We lost!</h2>
+<% end %>
