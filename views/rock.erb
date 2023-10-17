@@ -1,0 +1,10 @@
+<h2>We played rock!</h2>
+<h2>They played <%= @opponent_sample %>!</h2>
+
+<% if @opponent_sample == "rock" %>
+  <h2>We tied!</h2>
+<% elsif @opponent_sample == "paper" %>
+  <h2>We lost!</h2>
+<% elsif @opponent_sample == "scissors" %>
+  <h2>We won!</h2>
+<% end %>
